@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url(../img/bg.jpg);
+    background-size: cover;
+}
+
+.laba-container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 10px;
+    max-width: 85%;
+    margin: 30px auto 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+#laba-number {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.laba-content {
+    max-width: 90%;
+    margin: 0 auto 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.laba-step {
+    text-align: center;
+}
+
+.laba-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.laba-show-code {
+    display: flex;
+    justify-content: center;
+}
+
+.laba-show-code > button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: #33b3b2;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.laba-show-code > button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #127e7e, #33b3b2);
+}
+
+#popup-overlay {
+    align-items: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+#popup-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-popup-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-popup-container > a {
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
