@@ -3,6 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: url(../img/bg.jpg);
     background-size: cover;
+    box-sizing: border-box;
 }
 
 .laba-container {
@@ -43,12 +44,12 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.laba-show-code {
+.show-modal {
     display: flex;
     justify-content: center;
 }
 
-.laba-show-code > button {
+.show-modal > button {
     padding: 10px 20px;
     border-radius: 15px;
     background: #33b3b2;
@@ -57,46 +58,43 @@ body {
     font-weight: bold;
     cursor: pointer;
     border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.laba-show-code > button:hover {
+.show-modal > button:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #127e7e, #33b3b2);
 }
 
-#popup-overlay {
-    align-items: center;
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.3);
-    justify-content: center;
-}
-
-#popup-content {
-    width: 90%;
+#modal-overlay{
     max-width: 400px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
+    width: 100%;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: none;
+
+    &::backdrop{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
-.close-popup-container {
+.close-btn{
     display: flex;
     justify-content: flex-end;
+
+    & > a{
+        cursor: pointer;
+        user-select: none;
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+    }
 }
 
-.close-popup-container > a {
-    font-size: 1.5rem;
-    color: #000;
-    cursor: pointer;
-    text-decoration: none;
-}
+
+
+
+
+
+

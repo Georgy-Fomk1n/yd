@@ -1,18 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const codeBtn = document.getElementById("btn-show-code");
-    const popupOverlay = document.getElementById("popup-overlay");
-    const closePopup = document.getElementById("close-popup");
+    const codeBtns = document.getElementsByClassName("show-code");
 
-    function showPopup() {
-        popupOverlay.style.display = "flex";
+    const modalWin = document.getElementById("modal-overlay");
+    const closemodal = document.getElementById("close-modal");
+
+    function showCode(){
+        modalWin.showModal();
+    }
+    function closeCode(){
+        modalWin.close();
     }
 
-    function hidePopup() {
-        popupOverlay.style.display = "none";
-    }
+    for (let i = 0; i < codeBtns.length; i++)
+        codeBtns[i].addEventListener("click", showCode)
 
-    codeBtn.addEventListener("click", showPopup);
-    closePopup.addEventListener("click", hidePopup);
+    closemodal.addEventListener("click", closeCode)
 });
 
 
