@@ -1,0 +1,633 @@
+.desktop-3,
+.desktop-3 * {
+  box-sizing: border-box;
+}
+.desktop-3 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.group-43 {
+  position: absolute;
+  inset: 0;
+}
+.frame-35 {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: #ffd600;
+  border-width: 0.125rem;
+  padding: 8rem 2rem 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1875rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 31.125rem;
+  height: 51.1875rem;
+  position: absolute;
+  left: 76.6875rem;
+  top: 10.8125rem;
+}
+.frame-36 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.875rem;
+  position: absolute;
+  left: 78.6875rem;
+  top: 17.0625rem;
+}
+.div {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+}
+._6204 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+}
+.frame-38 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.875rem;
+  position: absolute;
+  left: 78.6875rem;
+  top: 18.8125rem;
+}
+.frame-37 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.875rem;
+  position: absolute;
+  left: 78.6875rem;
+  top: 21.9375rem;
+}
+.frame-45 {
+  background: #1e9553;
+  border-radius: 0.9375rem;
+  padding: 0.8125rem 8.875rem 0.8125rem 8.875rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  width: 28.625rem;
+  height: 3.1875rem;
+  position: absolute;
+  left: 77.9375rem;
+  top: 12.8125rem;
+}
+.div2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+.frame-39 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.875rem;
+  position: absolute;
+  left: calc(50% - -18.6875rem);
+  top: 27.5rem;
+}
+.div3 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+._62042 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+.group-44 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-130 {
+  background: #ffb22c;
+  width: 120rem;
+  height: 4.8125rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+.lumos {
+  color: #ffffff;
+  text-align: left;
+  font-family: "RoundsBlack-Regular", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  position: absolute;
+  left: 12.1875rem;
+  top: 0.625rem;
+}
+.group-31 {
+  position: absolute;
+  inset: 0;
+}
+.group-32 {
+  width: 62.75rem;
+  height: 23.8125rem;
+  position: static;
+}
+.rectangle-133 {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: #ffd600;
+  border-width: 0.125rem;
+  width: 62.75rem;
+  height: 23.8125rem;
+  position: absolute;
+  left: 12.1875rem;
+  top: 10.8125rem;
+}
+.group-37 {
+  width: 59.665rem;
+  height: 10rem;
+  position: static;
+}
+.heart {
+  width: 1.708125rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 70.875rem;
+  top: 24.3125rem;
+  overflow: visible;
+}
+.group-35 {
+  width: 11.3125rem;
+  height: 10rem;
+  position: static;
+}
+.image-2047 {
+  border-radius: 0.25rem;
+  width: 7.375rem;
+  height: 10rem;
+  position: absolute;
+  left: 18.125rem;
+  top: 24.0625rem;
+  object-fit: cover;
+}
+.rectangle-1332 {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.0625rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  position: absolute;
+  left: 14.1875rem;
+  top: calc(50% - 5.5rem);
+}
+.group-39 {
+  width: 5.469375rem;
+  height: 1.4375rem;
+  position: static;
+}
+.frame-33 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 4.043125rem;
+  height: 0.958125rem;
+  position: absolute;
+  left: calc(50% - 30.5rem);
+  top: calc(50% - 2.17375rem);
+}
+.minus {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  overflow: visible;
+}
+._1 {
+  color: #000000;
+  text-align: left;
+  font-family: "MontserratAlternates-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+.plus {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  overflow: visible;
+}
+.rectangle-132 {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-color: #a4a4a4;
+  border-width: 0.0625rem;
+  width: 5.469375rem;
+  height: 1.4375rem;
+  position: absolute;
+  left: 28.8125rem;
+  top: 31.3125rem;
+}
+._3-102 {
+  color: #000000;
+  text-align: left;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: absolute;
+  left: 67.875rem;
+  top: 31.625rem;
+  width: 5.9775rem;
+}
+.tertial {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.8125rem;
+  top: 24.6875rem;
+  width: 28.25rem;
+}
+.group-33 {
+  width: 5.469375rem;
+  height: 1.4375rem;
+  position: static;
+}
+.heart2 {
+  width: 1.708125rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 70.875rem;
+  top: 24.3125rem;
+  overflow: visible;
+}
+.image {
+  border-radius: 0.25rem;
+  width: 7.375rem;
+  height: 10rem;
+  position: absolute;
+  left: 18.125rem;
+  top: 24.0625rem;
+  object-fit: cover;
+}
+.tertial2 {
+  color: #313131;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.8125rem;
+  top: 27.8125rem;
+  width: 22.9375rem;
+}
+._10 {
+  color: #53d28c;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.75rem;
+  top: 30rem;
+  width: 8.5625rem;
+}
+.group-372 {
+  width: 60.6025rem;
+  height: 10.75rem;
+  position: static;
+}
+.heart3 {
+  width: 1.708125rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 70.875rem;
+  top: 12.8125rem;
+  overflow: visible;
+}
+.image-20472 {
+  border-radius: 0.25rem;
+  width: 7.375rem;
+  height: 10rem;
+  position: absolute;
+  left: 18.125rem;
+  top: 12.5625rem;
+  object-fit: cover;
+}
+.rectangle-1333 {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.0625rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  position: absolute;
+  left: 14.1875rem;
+  top: calc(50% - 17rem);
+}
+.frame-332 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 4.043125rem;
+  height: 0.958125rem;
+  position: absolute;
+  left: calc(50% - 30.5rem);
+  top: calc(50% - 13.67375rem);
+}
+.minus2 {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  overflow: visible;
+}
+.plus2 {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  overflow: visible;
+}
+.rectangle-1322 {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-color: #a4a4a4;
+  border-width: 0.0625rem;
+  width: 5.469375rem;
+  height: 1.4375rem;
+  position: absolute;
+  left: 28.8125rem;
+  top: 19.8125rem;
+}
+._3-1022 {
+  color: #000000;
+  text-align: left;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: absolute;
+  left: 67.875rem;
+  top: 20.125rem;
+  width: 5.9775rem;
+}
+.tertial3 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.8125rem;
+  top: 13.1875rem;
+  width: 28.25rem;
+}
+.heart4 {
+  width: 1.708125rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 70.875rem;
+  top: 12.8125rem;
+  overflow: visible;
+}
+.line-49 {
+  width: 59.3125rem;
+  height: 0rem;
+  position: absolute;
+  left: 13.25rem;
+  top: 23.3125rem;
+  overflow: visible;
+}
+.tertial4 {
+  color: #313131;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.8125rem;
+  top: 16.3125rem;
+  width: 22.9375rem;
+}
+._102 {
+  color: #53d28c;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  left: 28.75rem;
+  top: 18.5rem;
+  width: 8.5625rem;
+}
+.div4 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  position: absolute;
+  left: 12rem;
+  top: 6.5625rem;
+  width: 28.25rem;
+}
+.div5 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: absolute;
+  left: 12rem;
+  top: 38.25rem;
+  width: 28.25rem;
+}
+.frame-34 {
+  display: flex;
+  flex-direction: row;
+  gap: 1.0625rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 12rem;
+  top: 41.8125rem;
+}
+.group-40 {
+  flex-shrink: 0;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: static;
+}
+.rectangle-1323 {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: #ffd600;
+  border-width: 0.125rem;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+._3-1023 {
+  color: #000000;
+  text-align: left;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: absolute;
+  left: 1.3125rem;
+  top: 15.1875rem;
+  width: 5.4375rem;
+}
+.image2 {
+  border-radius: 0.25rem;
+  width: 18.625rem;
+  height: 12.8125rem;
+  position: absolute;
+  left: calc(50% - 30.9375rem);
+  top: 0.5rem;
+  object-fit: cover;
+}
+.tertial5 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 30.5625rem);
+  top: 18.125rem;
+  width: 18.9375rem;
+}
+.group-41 {
+  flex-shrink: 0;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: static;
+}
+.rectangle-1324 {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: #ffd600;
+  border-width: 0.125rem;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: absolute;
+  left: 21.5625rem;
+  top: 0rem;
+}
+._3-1024 {
+  color: #000000;
+  text-align: left;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: absolute;
+  left: 22.875rem;
+  top: 15.1875rem;
+  width: 5.4375rem;
+}
+.image3 {
+  border-radius: 0.25rem;
+  width: 18.625rem;
+  height: 12.8125rem;
+  position: absolute;
+  left: calc(50% - 9.375rem);
+  top: 0.5rem;
+  object-fit: cover;
+}
+.tertial6 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 18.125rem;
+  width: 18.9375rem;
+}
+.group-42 {
+  flex-shrink: 0;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: static;
+}
+.rectangle-1325 {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: #ffd600;
+  border-width: 0.125rem;
+  width: 20.5rem;
+  height: 23.8125rem;
+  position: absolute;
+  left: 43.125rem;
+  top: 0rem;
+}
+._3-1025 {
+  color: #000000;
+  text-align: left;
+  font-family: "Arial-Regular", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: absolute;
+  left: 44.4375rem;
+  top: 15.1875rem;
+  width: 5.4375rem;
+}
+.image4 {
+  border-radius: 0.25rem;
+  width: 18.625rem;
+  height: 12.8125rem;
+  position: absolute;
+  left: calc(50% - -12.1875rem);
+  top: 0.5rem;
+  object-fit: cover;
+}
+.tertial7 {
+  color: #000000;
+  text-align: left;
+  font-family: "CenturyGothic-Regular", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - -12.5625rem);
+  top: 18.125rem;
+  width: 18.9375rem;
+}

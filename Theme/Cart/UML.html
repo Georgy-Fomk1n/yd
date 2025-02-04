@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3ИСиП-822</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url("../img/bg.jpg") no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column; /* Для вертикального размещения контента */
+            min-height: 100vh; /* Обеспечивает минимальную высоту для всего окна */
+        }
+
+        h2 {
+            margin-top: 1%;
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        main {
+            width: 80%;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .img {
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+        }
+
+        .um {
+            max-width: 80%;
+        }
+
+        .people {
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>UML</h2>
+        <h2>Диаграмма вариантов использования итогового сайта</h2>
+        <div class="people">
+            <img src="../korzina/peopleuml.png" alt="Диаграмма использования">
+        </div>
+
+        <h2>Диаграмма деятельности итогового сайта</h2>
+        <img class="um" src="../korzina/umlmy.png" alt="Диаграмма деятельности">
+        
+        <div class="img">
+            <h2>Wildberries</h2>
+            <h2>Ozon</h2>
+            <h2>AliExpress</h2>
+        </div>
+        <div class="img">
+            <div><img src="../korzina/umlkorzinaWB.png" alt="Wildberries UML"></div>
+            <div><img src="../korzina/umlkorzinaOZON.png" alt="Ozon UML"></div>
+            <div><img src="../korzina/umlkorzinaALIK.png" alt="AliExpress UML"></div>
+        </div>
+    </main>
+</body>
+</html>

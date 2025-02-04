@@ -16,7 +16,7 @@ body {
     color: #000;
 }
 
-#laba-number {
+.laba-number {
     text-align: center;
     margin-bottom: 10px;
     padding: 10px 20px;
@@ -67,7 +67,7 @@ body {
     background: linear-gradient(135deg, #127e7e, #33b3b2);
 }
 
-#popup-overlay {
+.popup-overlay {
     align-items: center;
     display: none;
     width: 100%;
@@ -77,9 +77,10 @@ body {
     left: 0;
     background: rgba(0, 0, 0, 0.3);
     justify-content: center;
+    z-index: 99;
 }
 
-#popup-content {
+.popup-content {
     width: 90%;
     max-width: 400px;
     padding: 20px;

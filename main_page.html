@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Умный дом</title>
+    <title>Освещение</title>
     <link rel="stylesheet" href="./Main Page/main_page.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
             <div class="menu-item" onclick="handleClick('Отчет УП')">
                 Отчет по УП
             </div>
-            <div class="menu-item" onclick="handleClick('Курсовая Работа')" style="background-color: #FF6F61;">
+            <div class="menu-item" onclick="openInNewTab('зефир-и-пряник.рф')" style="background-color: #FF6F61;">
                 Курсовая работа
             </div>
         </div>
@@ -34,11 +34,11 @@
         }
 
         function openPage(url) {
-            window.location.href = url; // Указание пути к вашему HTML-файлу
+            window.location.href = url; 
         }
 
         function openInNewTab(url) {
-            window.open(url, '_blank'); // открытие в новой вкладке
+            window.open(url, '_blank');
         }
 
     </script>

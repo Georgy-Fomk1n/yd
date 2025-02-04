@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+    <style>
+        body {
+            background-color: white;
+            color: #33b3b2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #33b3b2;
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+            margin-bottom: 50vh;
+        }
+        th, td {
+            border: 1px solid #33b3b2;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #33b3b2;
+            color: white;
+        }
+        button {
+            background-color: #33b3b2;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #27918f;
+        }
+        .code {
+            font-family: "Courier New", Courier, monospace;
+            color: #333;
+            text-align: left;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа №1</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Задача</th>
+                <th>Код</th>
+                <th>Демонстрация</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Сделайте файл с вашей первой программой. Выведите в ней на экран какой-нибудь текст.</td>
+                <td class="code">function task1() {<br>    alert('Это ваша первая программа!');<br>}</td>
+                <td><button onclick="task1()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Создайте файл со скриптом. Подключите его к вашему HTML файлу. Проверьте его работу.</td>
+                <td class="code">function task2() {<br>    alert('Скрипт успешно подключен!');<br>}</td>
+                <td><button onclick="task2()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Создайте три файла со скриптами. Подключите их к вашему HTML файлу. Проверьте их работу.</td>
+                <td class="code">function task3() {<br>    greet();<br>    showtext();<br>    all();<br>}</td>
+                <td><button onclick="task3()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Создайте переменную num и присвойте ей значение 123. Выведите значение этой переменной на экран с помощью функции alert.</td>
+                <td class="code">function task5() {<br>    let num = 123;<br>    alert(num);<br>}</td>
+                <td><button onclick="task5()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Создайте переменную a. Запишите в нее значение 10, выведите его на экран. Затем запишите в нее значение 20, выведите его на экран.</td>
+                <td class="code">function task6() {<br>    let a = 10;<br>    alert(a);<br>    a = 20;<br>    alert(a);<br>}</td>
+                <td><button onclick="task6()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Создайте переменную a. Запишите в нее сумму чисел 1, 2 и 3. С помощью функции alert выведите на экран содержимое переменной a.</td>
+                <td class="code">function task7() {<br>    let a = 1 + 2 + 3;<br>    alert(a);<br>}</td>
+                <td><button onclick="task7()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Создайте переменную a со значением 10 и переменную b со значением 2. Выведите на экран их сумму, разность, произведение и частное (результат деления).</td>
+                <td class="code">function task8() {<br>    let a = 10;<br>    let b = 2;<br>    alert(`Сумма: ${a + b}, Разность: ${a - b}, Произведение: ${a * b}, Частное: ${a / b}`);<br>}</td>
+                <td><button onclick="task8()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Создайте переменную c со значением 10 и переменную d со значением 5. Просуммируйте их, а результат присвойте переменной result. Выведите на экран значение переменной result.</td>
+                <td class="code"> function task9() {<br>    let c = 10;<br>    let d = 5;<br>    let result = c + d;<br>    alert(result);<br>}</td>
+                <td><button onclick="task9()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Создайте переменную a со значением 1, переменную b со значением 2 и переменную c со значением 3. Выведите на экран их сумму.</td>
+                <td class="code">function task10() { <br>    let a = 1, b = 2, c = 3;<br>    alert(a + b + c);<br>}</td>
+                <td><button onclick="task10()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Создайте переменную a со значением 10 и переменную b со значением 5. Отнимите от a переменную b и результат присвойте переменной c. Затем создайте переменную d, присвойте ей значение 7. Сложите переменные c и d, а результат запишите в переменную result. Выведите на экран значение переменной result.</td>
+                <td class="code">function task11() {<br>    let a = 10;<br>    let b = 5;<br>    let c = 3;<br>    let d = 7;<br>    let result = a - b + c - d;<br>    alert(result);<
+                <td><button onclick="task11()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Создайте переменную a со значением -100. Выведите это значение на экран.</td>
+                <td class="code">function task12() {<br>    let a = -100;<br>    alert(a);<br>}</td>
+                <td><button onclick="task12()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Создайте переменную a, запишите в нее какое-нибудь положительное или отрицательное число. Выведите на экран это число с обратным знаком.</td>
+                <td class = "code">function task13() {<br>    let a = -100;<br>    alert(a);<br>}</td>
+                <td><button onclick="task13()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Возведите число 2 в 10-ю степень. Выведите результат на экран.</td>
+                <td class="code" >function task14() {<br>    let a = 2;<br>    alert(a ** 10);<br>}</td>
+                <td><button onclick="task14()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Создайте строку с вашем именем и строку с вашей фамилией. Выведите эти данные на экран.</td>
+                <td class="code"> function task15() {<br>    let name = 'Иван';<br>    let surname = 'Иванов';<br>    alert(`${name} ${surname}`);<br>}</td>
+                <td><button onclick="task15()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Создайте переменную str и присвойте ей строку '!!!'. Выведите значение этой переменной на экран.</td>
+                <td class="code">function task16() {<br>    let str = '!!!';<br>    alert(str);<br>}</td>
+                <td><button onclick="task16()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Создайте переменную с текстом 'java' и переменную с текстом 'script'. С помощью этих переменных и операции сложения строк выведите на экран строку 'javascript'.</td>
+                <td class="code">function task17() {<br>    let str = 'javascript';<br>    alert(str);<br>}</td>
+                <td><button onclick="task17()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Создайте переменную с текстом 'hello' и переменную с текстом 'world'. С помощью этих переменных и операции сложения строк выведите на экран строку 'hello world'</td>
+                <td class="code"> function task18() {<br>    let str = 'hello world';<br>    alert(str);<br>}</td>
+                <td><button onclick="task18()">Выполнить</button></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Запишите в переменную str строку, состоящую из символов 'a', 'b', 'c', причем после каждого символа, кроме последнего, должен стоять перенос строки.</td>
+                <td class="code"> function task19() {<br>    let str = 'abc';<br>    alert(str);<br>}</td>
+                <td><button onclick="task19()">Выполнить</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js?v=1.0"></script>
+    <script src="script2.js?v=1.0"></script>
+    <script src="script3.js?v=1.0"></script>
+    <script>
+        function task1() {
+            alert('Это ваша первая программа!');
+        }
+
+        function task2() {
+            alert('Скрипт успешно подключен!');
+        }
+
+        function task3() {
+            greet();         
+            showtext();
+            all();      
+        }
+
+        function task5() {
+            let num = 123;
+            alert(num);
+        }
+
+        function task6() {
+            let a = 10;
+            alert(a);
+            a = 20;
+            alert(a);
+        }
+
+        function task7() {
+            let a = 1 + 2 + 3;
+            alert(a);
+        }
+
+        function task8() {
+            let a = 10;
+            let b = 2;
+            alert(`Сумма: ${a + b}, Разность: ${a - b}, Произведение: ${a * b}, Частное: ${a / b}`);
+        }
+
+        function task9() {
+            let c = 10;
+            let d = 5;
+            let result = c + d;
+            alert(result);
+        }
+
+        function task10() {
+            let a = 1, b = 2, c = 3;
+            alert(a + b + c);
+        }
+
+        function task11() {
+            let a = 10, b = 5;
+            let c = a - b;
+            let d = 7;
+            let result = c + d;
+            alert(result);
+        }
+
+        function task12() {
+            let a = -100;
+            alert(a);
+        }
+
+        function task13() {
+            let a = -123;
+            alert(-a);
+        }
+
+        function task14() {
+            alert(Math.pow(2, 10));
+        }
+
+        function task15() {
+            let name = 'Георгий';
+            let surname = 'Фомкин';
+            alert(`${name} ${surname}`);
+        }
+
+        function task16() {
+            let str = '!!!';
+            alert(str);
+        }
+
+        function task17() {
+            let java = 'java';
+            let script = 'script';
+            alert(java + script);
+        }
+
+        function task18() {
+            let hello = 'hello';
+            let world = 'world';
+            alert(`${hello} ${world}`);
+        }
+
+        function task19() {
+            let str = 'a\nb\nc';
+            alert(str.split('\n').join('\n'));
+        }
+    </script>
+</body>
+</html>

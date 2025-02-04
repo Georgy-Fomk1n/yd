@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        button[name="inc"] {
+            background-color: #28a745;
+            color: white;
+        }
+        button[name="dec"] {
+            background-color: #dc3545;
+            color: white;
+        }
+        span[name="counter"] {
+            font-size: 20px;
+            min-width: 30px;
+            display: inline-block;
+        }
+        .accordion {
+            margin: 20px auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .accordion-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1> Лабораторная работа №3</h1>
+    <h2>Счетчики</h2>
+    <div class="counter-container">
+        <button name="dec">-</button>
+        <span name="counter">0</span>
+        <button name="inc">+</button>
+    </div>
+    <div class="counter-container">
+        <button name="dec">-</button>
+        <span name="counter">0</span>
+        <button name="inc">+</button>
+    </div>
+    <div class="counter-container">
+        <button name="dec">-</button>
+        <span name="counter">0</span>
+        <button name="inc">+</button>
+    </div>
+    <div class="counter-container">
+        <button name="dec">-</button>
+        <span name="counter">0</span>
+        <button name="inc">+</button>
+    </div>
+    
+    <h2>Вопросы и ответы</h2>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">Что такое метод document.getElementsByClassName и как он работает?</div>
+            <div class="accordion-content">Этот метод возвращает коллекцию элементов с указанным классом.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Какова структура HTML-документа?</div>
+            <div class="accordion-content">Документ содержит кнопки, счетчики и аккордеон с вопросами.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как вы можете изменить значение счетчика с помощью JavaScript?</div>
+            <div class="accordion-content">Доступ к счетчику можно получить через document.getElementsByName и изменить его innerHTML.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Что такое обработчик событий в JavaScript?</div>
+            <div class="accordion-content">Обработчик событий - это функция, которая выполняется при наступлении определенного события, например, клике.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как использовать addEventListener?</div>
+            <div class="accordion-content">Метод addEventListener позволяет привязать функцию-обработчик к событию элемента.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как происходит изменение значения счетчика?</div>
+            <div class="accordion-content">Значение увеличивается или уменьшается при нажатии на соответствующую кнопку.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Что происходит при уменьшении значения счетчика до нуля?</div>
+            <div class="accordion-content">Если добавить проверку, можно предотвратить уменьшение ниже нуля.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как можно улучшить код?</div>
+            <div class="accordion-content">Использовать более безопасные методы работы с DOM, минимизировать дублирование кода.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как стилизовать счетчики и кнопки с помощью CSS?</div>
+            <div class="accordion-content">Использовать стили CSS для изменения цветов, размеров и отступов.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Как можно расширить функциональность?</div>
+            <div class="accordion-content">Добавить дополнительные кнопки, настройки или анимации.</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.getElementsByName('counter');
+            const incButtons = document.getElementsByName('inc');
+            const decButtons = document.getElementsByName('dec');
+
+            for (let i = 0; i < incButtons.length; i++) {
+                incButtons[i].addEventListener('click', function() {
+                    const currentValue = parseInt(counters[i].innerHTML);
+                    counters[i].innerHTML = currentValue + 1;
+                });
+            }
+
+            for (let j = 0; j < decButtons.length; j++) {
+                decButtons[j].addEventListener('click', function() {
+                    const currentValue = parseInt(counters[j].innerHTML);
+                    if (currentValue > 0) {
+                        counters[j].innerHTML = currentValue - 1;
+                    }
+                });
+            }
+
+            const headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

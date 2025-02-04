@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .button {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 250px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            width: 100%;
+            min-height: 100px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: white;
+        }
+        .paragraph {
+            border: 1px solid #000;
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Кнопки для взаимодействия с DOM</h1>
+
+<div id="output">Вывод информации</div>
+
+<button class="button" id="changeColor">Случайный цвет фона</button>
+<button class="button" id="addText">Добавить текст</button>
+<button class="button" id="countElements">Подсчитать элементы</button>
+
+<script>
+    document.getElementById('changeColor').addEventListener('click', function () {
+        const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        document.getElementById('output').style.backgroundColor = randomColor;
+    });
+
+    document.getElementById('addText').addEventListener('click', function () {
+        const userInput = prompt("Введите текст:");
+        if (userInput) {
+            const newParagraph = document.createElement('p');
+            newParagraph.className = 'paragraph';
+            newParagraph.innerText = userInput;
+            document.getElementById('output').appendChild(newParagraph);
+        }
+    });
+
+    document.getElementById('countElements').addEventListener('click', function () {
+        const totalElements = document.querySelectorAll('*').length;
+        alert(`Количество элементов на странице: ${totalElements}`);
+    });
+</script>
+
+</body>
+</html>

@@ -1,21 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const codeBtn = document.getElementById("btn-show-code");
-    const popupOverlay = document.getElementById("popup-overlay");
-    const closePopup = document.getElementById("close-popup");
+    const codeButtons = document.querySelectorAll(".btn-show-code");
+    const popups = document.querySelectorAll(".popup-overlay");
 
-    function showPopup() {
-        popupOverlay.style.display = "flex";
-    }
+    codeButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            popups[index].style.display = "flex";
+        });
+    });
 
-    function hidePopup() {
-        popupOverlay.style.display = "none";
-    }
-
-    codeBtn.addEventListener("click", showPopup);
-    closePopup.addEventListener("click", hidePopup);
+    document.querySelectorAll(".close-popup").forEach((closeBtn, index) => {
+        closeBtn.addEventListener("click", () => {
+            popups[index].style.display = "none";
+        });
+    });
 });
-
-
-
-
-
