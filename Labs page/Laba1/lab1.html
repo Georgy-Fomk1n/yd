@@ -173,6 +173,268 @@
                 <td class="code"> function task19() {<br>    let str = 'abc';<br>    alert(str);<br>}</td>
                 <td><button onclick="task19()">Выполнить</button></td>
             </tr>
+            <tr>
+                <td>5.9</td>
+                <td>Таблица перевода расстояний в дюймах в сантиметры</td>
+                <td>
+                    <pre>
+function task5_9() {
+    console.log('Дюймы  | Сантиметры');
+    for (let inch = 10; inch <= 22; inch++) {
+        let cm = inch * 25.4;
+        console.log(`${inch} дюймов  | ${cm.toFixed(2)} см`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_9()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.10</td>
+                <td>Таблица перевода долларов США в рубли</td>
+                <td>
+                    <pre>
+function task5_10() {
+    let rate = prompt("Введите курс доллара к рублю:");
+    for (let dollars = 1; dollars <= 20; dollars++) {
+        let rubles = dollars * rate;
+        console.log(`${dollars} доллар(ов) = ${rubles.toFixed(2)} рублей`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_10()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.12</td>
+                <td>Таблица зависимости плотности от высоты</td>
+                <td>
+                    <pre>
+function task5_12() {
+    const p0 = 1.29;
+    const z = 1.25 * Math.pow(10, -4);
+    console.log('Высота (м)  | Плотность (кг/м³)');
+    for (let h = 0; h <= 1000; h += 100) {
+        let p = p0 * Math.exp(-z * h);
+        console.log(`${h} м  | ${p.toFixed(4)} кг/м³`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_12()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.13</td>
+                <td>Таблица умножения на 7</td>
+                <td>
+                    <pre>
+function task5_13() {
+    for (let i = 1; i <= 9; i++) {
+        console.log(`${i} x 7 = ${i * 7}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_13()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.14</td>
+                <td>Таблица умножения на 9</td>
+                <td>
+                    <pre>
+function task5_14() {
+    for (let i = 1; i <= 9; i++) {
+        console.log(`9 x ${i} = ${9 * i}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_14()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.15</td>
+                <td>Таблица умножения на число n</td>
+                <td>
+                    <pre>
+function task5_15() {
+    let n = prompt("Введите число для таблицы умножения (1 ≤ n ≤ 9):");
+    for (let i = 1; i <= 9; i++) {
+        console.log(`${i} x ${n} = ${i * n}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_15()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.16</td>
+                <td>Значения sin от 2 до 15</td>
+                <td>
+                    <pre>
+function task5_16() {
+    console.log('Значение sin:');
+    for (let i = 2; i <= 15; i++) {
+        console.log(`sin(${i}) = ${Math.sin(i).toFixed(4)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_16()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.17</td>
+                <td>Значения y для t = x + 3</td>
+                <td>
+                    <pre>
+function task5_17() {
+    console.log('x  | y');
+    for (let x = 4; x <= 28; x++) {
+        let t = x + 3;
+        let y = 3 * Math.pow(t, 2) + 4.87 * t - 3;
+        console.log(`${x}  | ${y.toFixed(2)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_17()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.18</td>
+                <td>Значения z для t = 3a</td>
+                <td>
+                    <pre>
+function task5_18() {
+    console.log('a  | z');
+    for (let a = 2; a <= 17; a++) {
+        let t = 3 * a;
+        let z = 4.3 * Math.pow(t, 2) - 8 * t + 13;
+        console.log(`${a}  | ${z.toFixed(2)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_18()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.19</td>
+                <td>Значения sin от 0.1 до 1.5</td>
+                <td>
+                    <pre>
+function task5_19() {
+    console.log('Значение sin:');
+    for (let i = 0.1; i <= 1.5; i += 0.1) {
+        console.log(`sin(${i}) = ${Math.sin(i).toFixed(4)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_19()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.21</td>
+                <td>Таблица стоимости сыра</td>
+                <td>
+                    <pre>
+function task5_21() {
+    let price = prompt("Введите цену 1 кг сыра:");
+    for (let weight = 50; weight <= 1000; weight += 50) {
+        let cost = (weight / 1000) * price;
+        console.log(`${weight} г  | ${cost.toFixed(2)} рублей`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_21()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.22</td>
+                <td>Таблица стоимости конфет</td>
+                <td>
+                    <pre>
+function task5_22() {
+    let price = prompt("Введите цену 1 кг конфет:");
+    for (let weight = 100; weight <= 2000; weight += 100) {
+        let cost = (weight / 1000) * price;
+        console.log(`${weight} г  | ${cost.toFixed(2)} рублей`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_22()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.23</td>
+                <td>Числа 2,1 до 2,8</td>
+                <td>
+                    <pre>
+function task5_23() {
+    for (let i = 1; i <= 8; i++) {
+        console.log(`2.${i}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_23()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.24</td>
+                <td>Числа 3,2 до 3,9</td>
+                <td>
+                    <pre>
+function task5_24() {
+    for (let i = 2; i <= 9; i++) {
+        console.log(`3.${i}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_24()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.25</td>
+                <td>Числа 2,2 до 4,2</td>
+                <td>
+                    <pre>
+function task5_25() {
+    for (let i = 1; i <= 21; i += 2) {
+        console.log(`2.${i}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_25()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.26</td>
+                <td>Числа 4,4 до 6,4</td>
+                <td>
+                    <pre>
+function task5_26() {
+    for (let i = 4; i <= 6; i++) {
+        for (let j = 4; j <= 8; j += 2) {
+            console.log(`${i},${j}`);
+        }
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_26()">Демонстрация</button></td>
+            </tr>
         </tbody>
     </table>
     <script src="script.js?v=1.0"></script>
@@ -278,5 +540,157 @@
             alert(str.split('\n').join('\n'));
         }
     </script>
+    <script>
+        
+        function task20() {
+            let inchToCm = 25.4;
+            let table = 'Дюймы | Сантиметры\n';
+            for (let i = 10; i <= 22; i++) {
+                table += `${i} | ${i * inchToCm}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task21() {
+            let rate = parseFloat(prompt("Введите курс доллара в рублях:"));
+            let table = 'Доллары | Рубли\n';
+            for (let i = 1; i <= 20; i++) {
+                table += `${i} | ${i * rate}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task22() {
+            let p0 = 1.29;
+            let z = 1.25e-4;
+            let table = 'Высота (м) | Плотность (кг/м³)\n';
+            for (let h = 0; h <= 1000; h += 100) {
+                let p = p0 * Math.exp(-z * h);
+                table += `${h} | ${p}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task23() {
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `${i} х 7 = ${i * 7}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task24() {
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `9 х ${i} = ${9 * i}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task25() {
+            let n = parseInt(prompt("Введите число для умножения (от 1 до 9):"));
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `${i} х ${n} = ${i * n}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task26() {
+            let table = '';
+            for (let i = 2; i <= 15; i++) {
+                table += `sin(${i}) = ${Math.sin(i)}\n`;
+            }
+            alert(table);
+        }
+    
+        
+        function task27() {
+            let table = '';
+            for (let x = 4; x <= 28; x++) {
+                let t = x + 3;
+                let y = 3 * Math.pow(t, 2) + 4.87 * t - 3;
+                table += `x = ${x} | y = ${y}\n`;
+            }
+            alert(table);
+        }
+    
+        function task28() {
+            let table = '';
+            for (let a = 2; a <= 17; a++) {
+                let t = 3 * a;
+                let z = 4.3 * Math.pow(t, 2) - 8 * t + 13;
+                table += `a = ${a} | z = ${z}\n`;
+            }
+            alert(table);
+        }
+    
+        function task29() {
+            let table = '';
+            for (let x = 0.1; x <= 1.5; x += 0.1) {
+                table += `sin(${x}) = ${Math.sin(x)}\n`;
+            }
+            alert(table);
+        }
+    
+        function task30() {
+            let pricePerKg = parseFloat(prompt("Введите стоимость 1 кг сыра в рублях:"));
+            let table = 'Вес (г) | Стоимость (руб)\n';
+            for (let weight = 50; weight <= 1000; weight += 50) {
+                let price = (pricePerKg * weight) / 1000;
+                table += `${weight} | ${price}\n`;
+            }
+            alert(table);
+        }
+    
+        function task31() {
+            let pricePerKg = parseFloat(prompt("Введите стоимость 1 кг конфет в рублях:"));
+            let table = 'Вес (г) | Стоимость (руб)\n';
+            for (let weight = 100; weight <= 2000; weight += 100) {
+                let price = (pricePerKg * weight) / 1000;
+                table += `${weight} | ${price}\n`;
+            }
+            alert(table);
+        }
+    
+        function task32() {
+            let table = '';
+            for (let i = 2.1; i <= 2.8; i += 0.1) {
+                table += `${i}\n`;
+            }
+            alert(table);
+        }
+    
+        function task33() {
+            let table = '';
+            for (let i = 3.2; i <= 3.9; i += 0.1) {
+                table += `${i}\n`;
+            }
+            alert(table);
+        }
+    
+        function task34() {
+            let table = '';
+            for (let i = 2.2; i <= 4.2; i += 0.2) {
+                table += `${i}\n`;
+            }
+            alert(table);
+        }
+    
+        function task35() {
+            let table = '';
+            for (let i = 4.4; i <= 6.4; i += 0.2) {
+                table += `${i}\n`;
+            }
+            alert(table);
+        }
+    </script>
+    
 </body>
 </html>
