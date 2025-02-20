@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инженерный калькулятор</title>
+  <style>
+   body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f7;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  max-width: 350px;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #1c1c1e;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 32px;
+  text-align: right;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 15px;
+  background: #2c2c2e;
+  color: white;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.1s;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.number {
+  background-color: #505050;
+  color: white;
+}
+
+.number:hover {
+  background-color: #606060;
+}
+
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #d87a00;
+}
+
+.function {
+  background-color: #d4d4d2;
+  color: black;
+}
+
+.function:hover {
+  background-color: #bcbcbc;
+}
+
+.history {
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+  </style>
+  <script src="./laba11_files/math.js.загрузка"></script>
+</head>
+<body>
+    <div class="container">
+          <h1>Лабораторная работа 11</h1>
+          <a href="http://s9166057.beget.tech/Labs%20page/lab_11/question.html" class="button">Перейти к вопросам</a>
+          <br>
+          <br>
+          
+        <div class="calculator">
+        <input type="text" id="display" disabled="">
+        <div class="buttons">
+          <button class="red" onclick="clearDisplay()">C</button>
+          <button class="red" onclick="backspace()">⌫</button>
+          <button class="red" onclick="calculate()">=</button>
+          <button onclick="appendToDisplay(&#39;/&#39;)">/</button>
+          <button class="blu" onclick="appendToDisplay(&#39;7&#39;)">7</button>
+          <button class="blu" onclick="appendToDisplay(&#39;8&#39;)">8</button>
+          <button class="blu" onclick="appendToDisplay(&#39;9&#39;)">9</button>
+          <button onclick="appendToDisplay(&#39;*&#39;)">*</button>
+          <button class="blu" onclick="appendToDisplay(&#39;4&#39;)">4</button>
+          <button class="blu" onclick="appendToDisplay(&#39;5&#39;)">5</button>
+          <button class="blu" onclick="appendToDisplay(&#39;6&#39;)">6</button>
+          <button onclick="appendToDisplay(&#39;-&#39;)">-</button>
+          <button class="blu" onclick="appendToDisplay(&#39;1&#39;)">1</button>
+          <button class="blu" onclick="appendToDisplay(&#39;2&#39;)">2</button>
+          <button class="blu" onclick="appendToDisplay(&#39;3&#39;)">3</button>
+          <button onclick="appendToDisplay(&#39;+&#39;)">+</button>
+          <button onclick="appendToDisplay(&#39;.&#39;)">.</button>
+          <button class="blu" onclick="appendToDisplay(&#39;0&#39;)">0</button>
+          <button onclick="appendToDisplay(&#39;(&#39;)">(</button>
+          <button onclick="appendToDisplay(&#39;)&#39;)">)</button>
+          <button onclick="appendToDisplay(&#39;sin(&#39;)">sin</button>
+          <button onclick="appendToDisplay(&#39;cos(&#39;)">cos</button>
+          <button onclick="appendToDisplay(&#39;tan(&#39;)">tan</button>
+          <button onclick="appendToDisplay(&#39;sqrt(&#39;)">√</button>
+          <button onclick="appendToDisplay(&#39;^&#39;)">^</button>
+          <button onclick="appendToDisplay(&#39;pi&#39;)">π</button>
+          <button onclick="appendToDisplay(&#39;e&#39;)">e</button>
+          <button onclick="appendToDisplay(&#39;log(&#39;)">log</button>
+          <button onclick="appendToDisplay(&#39;!&#39;)">!</button>
+        </div>
+        <div class="history" id="history"></div>
+      </div>
+  </div>
+  <script>
+    function appendToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    function backspace() {
+      const display = document.getElementById('display');
+      display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+      const display = document.getElementById('display');
+      let expression = display.value;
+      const history = document.getElementById('history');
+
+      try {
+        expression = expression.replace(/sin\(/g, "sin(" + Math.PI / 180 + "*");
+        expression = expression.replace(/cos\(/g, "cos(" + Math.PI / 180 + "*");
+        expression = expression.replace(/tan\(/g, "tan(" + Math.PI / 180 + "*");
+        const result = math.evaluate(expression);
+        history.innerHTML = `<p>${expression} = <strong>${result}</strong></p>` + history.innerHTML;
+        display.value = result;
+      } catch (error) {
+        display.value = 'Ошибка';
+      }
+    }
+  </script>
+
+
+</body></html>

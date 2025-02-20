@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 9: Объекты в JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .accordion {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .accordion-header {
+            background-color: #009380;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа 9: Объекты в JavaScript</h1>
+    <h2>Практическая часть</h2>
+    <pre id="output"></pre>
+
+    <h3>Код решения</h3>
+    <pre>
+let car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2015
+};
+
+car.year = new Date().getFullYear();
+car.color = "Чёрный";
+delete car.model;
+
+console.log("Свойство 'brand' существует:", "brand" in car);
+
+for (let key in car) {
+    console.log(key + ": " + car[key]);
+}
+
+let carCopy = { ...car };
+carCopy.color = "Красный";
+
+car.owner = {
+    name: "Иван",
+    age: 35
+};
+
+let { name } = car.owner;
+console.log("Имя владельца:", name);
+
+let keys = Object.keys(car);
+let values = Object.values(car);
+console.log("Ключи:", keys);
+console.log("Значения:", values);
+    </pre>
+
+    <h2>Вопросы и ответы</h2>
+    <div class="accordion-container">
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Как можно получить значение свойства объекта через точечную нотацию?</div>
+            <div class="accordion-content">Через точку: <code>object.property</code></div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">В каких случаях удобнее использовать квадратные скобки для доступа к свойствам объекта?</div>
+            <div class="accordion-content">Когда имя свойства хранится в переменной или содержит пробелы/спецсимволы.</div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Как можно изменить значение существующего свойства объекта?</div>
+            <div class="accordion-content"><code>object.property = новое_значение;</code></div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Как добавить новое свойство в объект?</div>
+            <div class="accordion-content"><code>object.newProperty = значение;</code></div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Как удалить свойство из объекта?</div>
+            <div class="accordion-content"><code>delete object.property;</code></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            let content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        let output = "";
+        let car = {
+            brand: "Toyota",
+            model: "Camry",
+            year: 2015
+        };
+
+        car.year = new Date().getFullYear();
+        car.color = "Чёрный";
+        delete car.model;
+        
+        output += "Свойство 'brand' существует: " + ("brand" in car) + "\n";
+        
+        for (let key in car) {
+            output += key + ": " + car[key] + "\n";
+        }
+
+        let carCopy = { ...car };
+        carCopy.color = "Красный";
+        
+        car.owner = {
+            name: "Иван",
+            age: 35
+        };
+        
+        let { name } = car.owner;
+        output += "\nИмя владельца: " + name + "\n";
+
+        let keys = Object.keys(car);
+        let values = Object.values(car);
+        output += "\nКлючи: " + keys.join(", ") + "\n";
+        output += "Значения: " + values.join(", ") + "\n";
+
+        document.getElementById("output").textContent = output;
+    </script>
+</body>
+</html>

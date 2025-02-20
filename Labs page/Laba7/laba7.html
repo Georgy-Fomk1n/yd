@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторная работа 7</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      margin: 0;
+    }
+    .calculator {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    select, input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+    select, input {
+      background: #f8f9fa;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #result {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      background: #d4edda;
+      color: #155724;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Калькулятор площади</h1>
+    <select id="figureSelect">
+      <option value="">Выберите фигуру</option>
+      <option value="1">Ромб</option>
+      <option value="2">Треугольник</option>
+      <option value="3">Квадрат</option>
+      <option value="4">Прямоугольник</option>
+      <option value="5">Параллелограмм</option>
+      <option value="6">Прямоугольный треугольник</option>
+      <option value="7">Трапеция</option>
+    </select>
+    <div id="inputFields"></div>
+    <button id="calculateButton">Рассчитать</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    const figureSelect = document.getElementById('figureSelect');
+    const inputFields = document.getElementById('inputFields');
+    const result = document.getElementById('result');
+    const calculateButton = document.getElementById('calculateButton');
+    
+    function showInputFields(figureType) {
+      result.style.display = 'none';
+      const inputTemplates = {
+        "1": `<input type="number" id="d1" placeholder="Первая диагональ">
+               <input type="number" id="d2" placeholder="Вторая диагональ">`,
+        "2": `<input type="number" id="base" placeholder="Основание">
+               <input type="number" id="height" placeholder="Высота">`,
+        "3": `<input type="number" id="side" placeholder="Сторона квадрата">`,
+        "4": `<input type="number" id="length" placeholder="Длина">
+               <input type="number" id="width" placeholder="Ширина">`,
+        "5": `<input type="number" id="base" placeholder="Основание">
+               <input type="number" id="height" placeholder="Высота">`,
+        "6": `<input type="number" id="leg1" placeholder="Первый катет">
+               <input type="number" id="leg2" placeholder="Второй катет">`,
+        "7": `<input type="number" id="base1" placeholder="Первое основание">
+               <input type="number" id="base2" placeholder="Второе основание">
+               <input type="number" id="height" placeholder="Высота">`
+      };
+      inputFields.innerHTML = inputTemplates[figureType] || '';
+    }
+
+    function getInputValue(id) {
+      const element = document.getElementById(id);
+      return element ? Number(element.value) : 0;
+    }
+
+    function calculateArea() {
+      const figureType = figureSelect.value;
+      let area = 0;
+      const calculations = {
+        "1": () => (getInputValue('d1') * getInputValue('d2')) / 2,
+        "2": () => (getInputValue('base') * getInputValue('height')) / 2,
+        "3": () => getInputValue('side') ** 2,
+        "4": () => getInputValue('length') * getInputValue('width'),
+        "5": () => getInputValue('base') * getInputValue('height'),
+        "6": () => (getInputValue('leg1') * getInputValue('leg2')) / 2,
+        "7": () => ((getInputValue('base1') + getInputValue('base2')) / 2) * getInputValue('height')
+      };
+      
+      if (!figureType) {
+        result.innerHTML = 'Выберите фигуру';
+        result.style.display = 'block';
+        return;
+      }
+      
+      area = calculations[figureType]();
+      
+      if (isNaN(area) || area <= 0) {
+        result.innerHTML = 'Введите корректные значения';
+      } else {
+        result.innerHTML = `Площадь: ${area.toFixed(2)}`;
+      }
+      result.style.display = 'block';
+    }
+
+    figureSelect.addEventListener('change', function(event) {
+      showInputFields(event.target.value);
+    });
+    calculateButton.addEventListener('click', calculateArea);
+  </script>
+</body>
+</html>

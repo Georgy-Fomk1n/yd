@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+    <style>
+        body {
+            background-color: white;
+            color: #33b3b2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #33b3b2;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+            margin-bottom: 50vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        th, td {
+            border: 1px solid #33b3b2;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #33b3b2;
+            color: white;
+        }
+
+        button {
+            background-color: #33b3b2;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #27918f;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(1.05);
+        }
+
+        .code {
+            font-family: "Courier New", Courier, monospace;
+            color: #333;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        /* Стиль для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            max-height: 500px;
+            overflow-y: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .table-output {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .table-output td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .table-output th {
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Задание 04.02</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Задача</th>
+                <th>Код</th>
+                <th>Демонстрация</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5.9</td>
+                <td>Таблица перевода расстояний в дюймах в сантиметры</td>
+                <td>
+                    <pre>
+function task5_9() {
+    console.log('Дюймы  | Сантиметры');
+    for (let inch = 10; inch <= 22; inch++) {
+        let cm = inch * 25.4;
+        console.log(`${inch} дюймов  | ${cm.toFixed(2)} см`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_9()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.10</td>
+                <td>Таблица перевода долларов США в рубли</td>
+                <td>
+                    <pre>
+function task5_10() {
+    let rate = prompt("Введите курс доллара к рублю:");
+    for (let dollars = 1; dollars <= 20; dollars++) {
+        let rubles = dollars * rate;
+        console.log(`${dollars} доллар(ов) = ${rubles.toFixed(2)} рублей`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_10()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.11</td>
+                <td>Таблица зависимости плотности воздуха от высоты</td>
+                <td>
+                    <pre>
+function task5_11() {
+    let p0 = 1.29;
+    let z = 1.25e-4;
+    console.log('Высота (м)  | Плотность (кг/м³)');
+    for (let h = 0; h <= 1000; h += 100) {
+        let p = p0 * Math.exp(-z * h);
+        console.log(`${h} | ${p.toFixed(2)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_11()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.12</td>
+                <td>Таблица умножения на 7</td>
+                <td>
+                    <pre>
+function task5_12() {
+    console.log('1 х 7 = 7');
+    for (let i = 2; i <= 9; i++) {
+        console.log(`${i} х 7 = ${i * 7}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_12()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.13</td>
+                <td>Таблица умножения на 9</td>
+                <td>
+                    <pre>
+function task5_13() {
+    console.log('1 х 9 = 9');
+    for (let i = 2; i <= 9; i++) {
+        console.log(`${i} х 9 = ${i * 9}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_13()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.14</td>
+                <td>Таблица умножения на n (от 1 до 9)</td>
+                <td>
+                    <pre>
+function task5_14() {
+    let n = parseInt(prompt("Введите число для умножения (от 1 до 9):"));
+    for (let i = 1; i <= 9; i++) {
+        console.log(`${i} х ${n} = ${i * n}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_14()">Демонстрация</button></td>
+            </tr>
+
+            <tr>
+                <td>5.15</td>
+                <td>Таблица значений синуса углов от 2 до 15</td>
+                <td>
+                    <pre>
+function task5_15() {
+    for (let i = 2; i <= 15; i++) {
+        console.log(`sin(${i}) = ${Math.sin(i).toFixed(2)}`);
+    }
+}
+                    </pre>
+                </td>
+                <td><button onclick="task5_15()">Демонстрация</button></td>
+            </tr>
+            <tr>
+                <td>5.16</td>
+                <td>Напечатать «столбиком» значения sin 2, sin 3, …, sin 15</td>
+                <td>
+                    <pre>
+            function task5_16() {
+                for (let i = 2; i <= 15; i++) {
+                    console.log(`sin(${i}) = ${Math.sin(i).toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_16()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.17</td>
+                <td>Рассчитать значения y для значений х, равных 4, 5, ..., 28: y = 3t² + 4,87t – 3, t = x + 3</td>
+                <td>
+                    <pre>
+            function task5_17() {
+                console.log('x   | y');
+                for (let x = 4; x <= 28; x++) {
+                    let t = x + 3;
+                    let y = 3 * t * t + 4.87 * t - 3;
+                    console.log(`${x}  | ${y.toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_17()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.18</td>
+                <td>Рассчитать значения z для значений a, равных 2, 3, ..., 17: z = 4,3t² – 8t + 13, t = 3a</td>
+                <td>
+                    <pre>
+            function task5_18() {
+                console.log('a   | z');
+                for (let a = 2; a <= 17; a++) {
+                    let t = 3 * a;
+                    let z = 4.3 * t * t - 8 * t + 13;
+                    console.log(`${a}  | ${z.toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_18()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.19</td>
+                <td>Вывести «столбиком» значения sin 0,1, sin 0,2, …, sin 1,5</td>
+                <td>
+                    <pre>
+            function task5_19() {
+                for (let i = 0.1; i <= 1.5; i += 0.1) {
+                    console.log(`sin(${i}) = ${Math.sin(i).toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_19()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.21</td>
+                <td>Напечатать таблицу стоимости 50, 100, 150, ..., 1000 г сыра (стоимость 1 кг сыра вводится с клавиатуры)</td>
+                <td>
+                    <pre>
+            function task5_21() {
+                let pricePerKg = prompt("Введите стоимость 1 кг сыра:");
+                console.log('Вес (г) | Стоимость (руб)');
+                for (let weight = 50; weight <= 1000; weight += 50) {
+                    let cost = (weight / 1000) * pricePerKg;
+                    console.log(`${weight}  | ${cost.toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_21()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.22</td>
+                <td>Напечатать таблицу стоимости 100, 200, 300, ..., 2000 г конфет (стоимость 1 кг конфет вводится с клавиатуры)</td>
+                <td>
+                    <pre>
+            function task5_22() {
+                let pricePerKg = prompt("Введите стоимость 1 кг конфет:");
+                console.log('Вес (г) | Стоимость (руб)');
+                for (let weight = 100; weight <= 2000; weight += 100) {
+                    let cost = (weight / 1000) * pricePerKg;
+                    console.log(`${weight}  | ${cost.toFixed(2)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_22()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.23</td>
+                <td>Вывести «столбиком» следующие числа: 2,1, 2,2, 2,3, ..., 2,8</td>
+                <td>
+                    <pre>
+            function task5_23() {
+                for (let i = 1; i <= 8; i++) {
+                    console.log(`2,${i}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_23()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.24</td>
+                <td>Вывести «столбиком» следующие числа: 3,2, 3,2, 3,3, ..., 3,9</td>
+                <td>
+                    <pre>
+            function task5_24() {
+                for (let i = 2; i <= 9; i++) {
+                    console.log(`3,${i}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_24()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.25</td>
+                <td>Вывести «столбиком» следующие числа: 2,2, 2,4, 2,6, ..., 4,2</td>
+                <td>
+                    <pre>
+            function task5_25() {
+                for (let i = 1; i <= 21; i += 2) {
+                    console.log(`2,${i}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_25()">Демонстрация</button></td>
+            </tr>
+            
+            <tr>
+                <td>5.26</td>
+                <td>Вывести «столбиком» следующие числа: 4,4, 4,6, 4,8, ..., 6,4</td>
+                <td>
+                    <pre>
+            function task5_26() {
+                for (let i = 4; i <= 6; i += 0.2) {
+                    console.log(`${i.toFixed(1)}`);
+                }
+            }
+                    </pre>
+                </td>
+                <td><button onclick="task5_26()">Демонстрация</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <pre id="modalContent" class="table-output"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Функция для открытия модального окна
+        function openModal(content) {
+            document.getElementById('modalContent').textContent = content;
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        // Закрытие модального окна
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = "none";
+            }
+        }
+
+        function task5_9() {
+            let table = 'Дюймы  | Сантиметры\n';
+            for (let inch = 10; inch <= 22; inch++) {
+                table += `${inch} дюймов  | ${(inch * 25.4).toFixed(2)} см\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_10() {
+            let rate = prompt("Введите курс доллара к рублю:");
+            let table = 'Доллары | Рубли\n';
+            for (let dollars = 1; dollars <= 20; dollars++) {
+                table += `${dollars} | ${(dollars * rate).toFixed(2)}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_11() {
+            let p0 = 1.29;
+            let z = 1.25e-4;
+            let table = 'Высота (м) | Плотность (кг/м³)\n';
+            for (let h = 0; h <= 1000; h += 100) {
+                let p = p0 * Math.exp(-z * h);
+                table += `${h} | ${p.toFixed(2)}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_12() {
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `${i} х 7 = ${i * 7}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_13() {
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `${i} х 9 = ${i * 9}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_14() {
+            let n = parseInt(prompt("Введите число для умножения (от 1 до 9):"));
+            let table = '';
+            for (let i = 1; i <= 9; i++) {
+                table += `${i} х ${n} = ${i * n}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_15() {
+            let table = '';
+            for (let i = 2; i <= 15; i++) {
+                table += `sin(${i}) = ${Math.sin(i).toFixed(2)}\n`;
+            }
+            openModal(table);
+        }
+
+        function task5_16() {
+    let table = '';
+    for (let i = 2; i <= 15; i++) {
+        table += `sin(${i}) = ${Math.sin(i).toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_17() {
+    let table = '';
+    for (let x = 4; x <= 28; x++) {
+        let t = x + 3;
+        let y = 3 * t * t + 4.87 * t - 3;
+        table += `x = ${x}, y = ${y.toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_18() {
+    let table = '';
+    for (let a = 2; a <= 17; a++) {
+        let t = 3 * a;
+        let z = 4.3 * t * t - 8 * t + 13;
+        table += `a = ${a}, z = ${z.toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_19() {
+    let table = '';
+    for (let i = 0.1; i <= 1.5; i += 0.1) {
+        table += `sin(${i}) = ${Math.sin(i).toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_21() {
+    let cheesePrice = prompt("Введите цену 1 кг сыра:");
+    let table = 'Вес (г) | Стоимость (руб)\n';
+    for (let weight = 50; weight <= 1000; weight += 50) {
+        table += `${weight} г | ${(cheesePrice * weight / 1000).toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_22() {
+    let candyPrice = prompt("Введите цену 1 кг конфет:");
+    let table = 'Вес (г) | Стоимость (руб)\n';
+    for (let weight = 100; weight <= 2000; weight += 100) {
+        table += `${weight} г | ${(candyPrice * weight / 1000).toFixed(2)}\n`;
+    }
+    openModal(table);
+}
+
+function task5_23() {
+    let table = '';
+    for (let i = 1; i <= 8; i++) {
+        table += `2.${i}\n`;
+    }
+    openModal(table);
+}
+
+function task5_24() {
+    let table = '';
+    for (let i = 2; i <= 9; i++) {
+        table += `3.${i}\n`;
+    }
+    openModal(table);
+}
+
+function task5_25() {
+    let table = '';
+    for (let i = 1; i <= 21; i += 2) {
+        table += `2.${i}\n`;
+    }
+    openModal(table);
+}
+
+function task5_26() {
+    let table = '';
+    for (let i = 4; i <= 6; i++) {
+        for (let j = 4; j <= 8; j += 2) {
+            table += `${i},${j}\n`;
+        }
+    }
+    openModal(table);
+}
+    </script>
+</body>
+</html>
